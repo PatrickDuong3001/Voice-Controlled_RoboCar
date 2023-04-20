@@ -1,7 +1,7 @@
 # Voice-Controlled RoboCar
 **Georgia Institute of Technology - ECE4180 Final Project**
 
-**Creators: Bao Phuc Duong, Cody Ells, Austin Rowland**
+**Creators: Bao Phuc Duong, Cody Ells, Austin Rowland, Rayan Khoury**
 
 ## Motivation
 * Throughout the course, we've learned a lot about embedded system programming and hardware design, so we're eager to create a brand new robot to see how we utilize our classroom knowledge and showcase our skills.
