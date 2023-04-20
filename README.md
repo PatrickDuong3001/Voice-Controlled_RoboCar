@@ -20,6 +20,8 @@
 * Driver Resistor: https://www.sparkfun.com/products/521
 * uLCD-144-g2: https://www.sparkfun.com/products/11377
 
+## System Connections
+
 ## Complete Schematic
 * Insert Fritzing diagram here
 
