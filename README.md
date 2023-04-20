@@ -6,7 +6,7 @@
 ## Motivation
 * Throughout the course, we've learned a lot about embedded system programming and hardware design, so we're eager to create a brand new robot to see how we utilize our classroom knowledge and showcase our skills.
 * We are impressed by how smart Vector and Emo robot can recognize the voice commands and do funny things based on the commands. We are confident we can also create one like that, so we decided to buid this RoboCar.
-* We also want to a cool project to put on our resume and our GitHub repo.
+* We want to have a cool project to put on our resume and our GitHub repo.
 
 ## Electronic Components
 * ARM Mbed LPC1768: https://www.sparkfun.com/products/9564
