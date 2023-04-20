@@ -9,6 +9,7 @@
 * We want to have a cool project to put on our resume and our GitHub repo.
 
 ## Electronic Components
+* Shadow Chassis: https://www.sparkfun.com/products/13301
 * ARM Mbed LPC1768: https://www.sparkfun.com/products/9564
 * EasyVR 3 Plus: https://www.sparkfun.com/products/15453
 * DC Motor: https://www.sparkfun.com/products/11696
@@ -35,3 +36,7 @@
 * The robot can be powered on and off with a slide switch on its battery case. 
 
 ## Future Improvements
+* We can add another Ultrasonic sensor at the back of the RoboCar so that it can detect obstacles when moving backward. 
+* In addition to "Forward", "Backward", "Left", "Right", we can teach the RoboCar to recognize more voice commands. 
+* We can redesign the power source so that the Mbed and the DC Motors can share the same power source instead of using two separate sources. 
+* We will redraw the facial expressions for the RoboCar to make it more colorful and lively. 
