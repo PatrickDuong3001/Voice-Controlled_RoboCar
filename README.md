@@ -18,3 +18,20 @@
 * Dual H-Bridge Motor Driver: https://www.sparkfun.com/products/14451
 * Driver Resistor: https://www.sparkfun.com/products/521
 * uLCD-144-g2: https://www.sparkfun.com/products/11377
+
+## Complete Schematic
+* Insert Fritzing diagram here
+
+## How RoboCar works
+**Functions Diagram** 
+![Alt_text](https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/master/diagram.png)
+* When powered on, the RoboCar actively waiting for voice commands (with EasyVR) and looking for obstacles (with Ultrasonic sensor) in front of it. 
+* If the voice command is "Forward", the RoboCar moves forward until it detects an obstacle on its path. To avoid collisions, the RoboCar turns right and waits for the next command. 
+* If the voice command is "Backward", the RoboCar moves backward for 3 seconds, then stops and waits for the next command. 
+* If the voice command is "Left", the RoboCar turns left. If the voice command is "Right", the RoboCar turns right. After the turn, it waits for the next command. 
+* Whenever there's an object within 50mm of the sensing range, no matter what the robot is doing (moving forward or idling), it immediately stops and turns right to avoid collisions. 
+* When the RoboCar moves forward, it plays the "Barbie Girl" song with the speaker. When the RoboCar moves backward or turns left/right, it plays a suitable beeping sound.
+* When the robot idles, the uLCD displays an idling animation. When the RoboCar moves or turns, the uLCD displays a happy animation.    
+* The robot can be powered on and off with a slide switch on its battery case. 
+
+## Future Improvements
