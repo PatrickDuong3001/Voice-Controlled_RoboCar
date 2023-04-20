@@ -2,6 +2,7 @@
 #include "mbed.h"
 #include "PwmOut.h"
 //#include "uLCD_4DGL.h"
+#include "mbed2/293/drivers/DigitalOut.h"
 #include "rtos.h"
 #include "Motor.h"
 #include "PinDetect.h"
@@ -13,14 +14,51 @@ Motor motorA(p21, p17, p18);
 Motor motorB(p22, p19, p20);
 Speaker mySpeaker(p23);
 Serial device(p13, p14);
+Ticker ledTick;
+
+DigitalOut frontLeftLED(p5);
+DigitalOut frontRightLED(p6);
+DigitalOut backLeftLED(p15);
+DigitalOut backRightLED(p16);
+
 int commandReceived = 0;
 int soundType = 0;
+int ledType = 0;
 //uLCD_4DGL uLCD(p9,p10,p30);
 
 void dist(int distance){}
 
 //Define necessary components for the robot
 ultrasonic mu(p6, p7, .1, 1, &dist);
+
+void ledController() {
+    if (ledType == 1) {    //two front LEDs up when moving forward
+        frontLeftLED = 1;
+        frontRightLED = 1;
+        backLeftLED = 0;
+        backRightLED = 0;
+    } else if (ledType == 2) { //two back LEDs up when moving backward
+        frontLeftLED = 0;
+        frontRightLED = 0;
+        backLeftLED = 1;
+        backRightLED = 1;
+    } else if (ledType == 3) {  //turn left LEDs up
+        frontLeftLED = 1;
+        frontRightLED = 0;
+        backLeftLED = 1;
+        backRightLED = 0;
+    } else if (ledType == 4) {  //turn right LEDs up
+        frontLeftLED = 0;
+        frontRightLED = 1;
+        backLeftLED = 0;
+        backRightLED = 1;
+    } else {        //when idling
+        frontLeftLED = 0;
+        frontRightLED = 0;
+        backLeftLED = 0;
+        backRightLED = 0;
+    }
+}
 
 void listener() {
     char rchar=0;
@@ -40,7 +78,7 @@ void listener() {
             pc.printf("char: %c", rchar);
             if (rchar == 'A') {         //turn left
                 commandReceived = 1;
-                rchar = 0;             
+                rchar = 0;
             } else if (rchar == 'B') { //turn right
                 commandReceived = 2;
                 rchar = 0;
@@ -187,11 +225,14 @@ int main() {
     mu.startUpdates();//start measuring the distance
     Thread listenerThread(listener);
     Thread soundThread(soundPlayer);
+    ledTick.attach(&ledController,0.2);
+
     int distance = 0;
     while(1) {
         distance = mu.getCurrentDistance();
         pc.printf("command: %d\n", commandReceived);
         if (commandReceived == 1) { //turn left command 1
+            ledType = 3;
             soundType = 3;
             Thread::wait(1000);
             motorA.speed(-1);
@@ -199,7 +240,9 @@ int main() {
             Thread::wait(1000);
             commandReceived = 0;
             soundType = 0;
+            ledType = 0;
         }  else if (commandReceived == 2) { //turn right command 2
+            ledType = 4;
             soundType = 3;
             Thread::wait(1000);
             motorA.speed(1);
@@ -207,30 +250,36 @@ int main() {
             Thread::wait(1000);
             commandReceived = 0;
             soundType = 0;
-        } else if (commandReceived == 3) { //forward command 3   
+            ledType = 0;
+        } else if (commandReceived == 3) { //forward command 3
+            ledType = 1;
             motorA.speed(-1);
             motorB.speed(1);
             soundType = 1;
         } else if (commandReceived == 4){  //backward command 4
+            ledType = 2;
             soundType = 2;
             int j = 0;
-            while (j < 11) {
+            while (j < 11) {    //move backward for only 3 seconds
                 motorA.speed(1);
                 motorB.speed(-1);
                 j++;
             }
             commandReceived = 0;
             soundType = 0;
+            ledType = 0;
             Thread::wait(200);
         } else  {   //command 0
+            ledType = 0;
             motorA.speed(0);
             motorB.speed(0);
         }
         pc.printf("distance: %d\n", distance);
         if (distance > 10 && distance < 100) {  //turn right when meet obstacles
+            ledType = 0;
             motorA.speed(0);
             motorB.speed(0);
             commandReceived = 2;
-        } 
+        }
     }
 }
