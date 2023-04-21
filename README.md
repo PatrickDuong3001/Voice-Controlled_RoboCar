@@ -24,11 +24,11 @@
 * Insert connections table here
 
 ## Complete Schematic
-* Insert Fritzing diagram here
+<img src="https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/master/RoboCar.png" width="476" height="685">
 
 ## How RoboCar works
 **Functions Diagram** 
-![Alt_text](https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/master/diagram.png)
+<img src="https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/master/diagram.png" width="736" height="414">
 * When powered on, the RoboCar actively waiting for voice commands (with EasyVR) and looking for obstacles (with Ultrasonic sensor) in front of it. 
 * If the voice command is "Forward", the RoboCar moves forward until it detects an obstacle on its path. To avoid collisions, the RoboCar turns right and waits for the next command. 
 * If the voice command is "Backward", the RoboCar moves backward for 3 seconds, then stops and waits for the next command. 
