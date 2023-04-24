@@ -17,11 +17,73 @@
 * LEDs: https://www.sparkfun.com/products/12062
 * PCB-Mount Speaker: https://www.sparkfun.com/products/11089
 * Dual H-Bridge Motor Driver: https://www.sparkfun.com/products/14451
-* Driver Resistor: https://www.sparkfun.com/products/521
+* Driver Transistor: https://www.sparkfun.com/products/521
 * uLCD-144-g2: https://www.sparkfun.com/products/11377
 
 ## System Connections
-* Insert connections table here
+**EasyVR 3 Plus to Mbed**
+|EasyVR|Mbed|Batteries|
+| --- | --- | -------- |
+| TX  | p14 |          |
+| RX  | p13 |          |
+| 5V  |     |     5V   |
+| GND | GND |    GND   |
+
+**Ultrasonic Sensor to Mbed**
+|Sonar|Mbed|Batteries|
+| --- |--- | --------|
+| VCC |    |   5V    |
+| Echo| p7 |         |
+| Trig| p6 |         |
+| GND | GND|  GND    |
+
+**uLCD to Mbed**
+|uLCD|Mbed|Batteries|
+|--- | ---| ---     |
+| 5V |    |   5V    |
+| GND|    |  GND    |
+| TX | p9 |         |
+| RX | p10|         |
+| RST| p30|         |
+
+**H-Bridge Motor Driver to Mbed**
+|H-Bridge     |     Mbed     |Batteries     |Left Motor  |Right Motor |
+|-------------|--------------|--------------|------------|------------| 
+| VM          |              |      5V      |            |            |
+| VCC         |  VOUT        |              |            |            |
+| GND         |  GND         |      GND     |            |            |
+| AO1         |              |              |      +     |            |
+| AO2         |              |              |      -     |            |
+| BO1         |              |              |            |      +     |
+| BO2         |              |              |            |      -     |
+| PWMA        |  p21         |              |            |            |
+| AI1         |  p17         |              |            |            |
+| AI2         |  p15         |              |            |            |
+| STBY        |  VOUT        |              |            |            |
+| BI1         |  p19         |              |            |            |
+| BI2         |  p20         |              |            |            |
+| PWMB        |  p22         |              |            |            |
+| GND         |  GND         |  GND         |            |            |
+
+**Speaker to Mbed**
+| Speaker | Mbed |Driver Transistor|Batteries |
+| ---     | ---  |  ---            | ---      |
+|   +     |      |                 |    5V    |
+|         |  p23 |    B            |          |
+|         |  GND |    E            |   GND    |
+|   -     |      |      C          |          |
+
+**LEDs to Mbed**
+| LEDs             |Mbed|
+| ---              | ---|
+| Front Left LED + | p5 |
+| Front Left LED - | GND|
+| Front Right LED +| p8 |
+| Front Right LED -| GND|
+| Back Left LED +  |p18 |
+| Back Left LED -  |GND |
+| Back Right LED + | p16|
+|Back Right LED -  | GND|
 
 ## Complete Schematic
 <img src="https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/master/RoboCar.png" width="476" height="685">
