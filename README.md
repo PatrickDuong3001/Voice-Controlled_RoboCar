@@ -21,7 +21,56 @@
 * uLCD-144-g2: https://www.sparkfun.com/products/11377
 
 ## System Connections
-* Insert connections table here
+
+### Format: 
+Inbound Connection: The connection on the listed device or peripheral
+Outbound Connection: The connection on another device or peripheral
+
+### ARM Mbed LPC1768
+
+### Easy VR 3 Plus
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| TX | Mbed Pin 14 |
+| RX | Mbed Pin 13 |
+| 5V | VIN |
+| GND | GND| 
+
+### SONAR
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| VCC | Mbed Pin VIN |
+| Echo | Mbed Pin 7 |
+| Trig | Mbed Pin 6 |
+| GND | GND| 
+
+### H-Bride Motor Driver
+
+### Left Motor
+
+### Right Motor
+
+### Speaker
+
+### Battery Pack 1
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| Front Left LED | Mbed Pin 5 |
+| Front Right LED | Mbed Pin 8 |
+
+### Battery Pack 2
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| 5V | VIN |
+| GND | GND |
+
+### LEDs
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| Front Left LED | Mbed Pin 5 |
+| Front Right LED | Mbed Pin 8 |
+| Back Left LED | Mbed Pin 18 |
+| Back Right LED | Mbed Pin 16 | 
 
 ## Complete Schematic
 * Insert Fritzing diagram here
