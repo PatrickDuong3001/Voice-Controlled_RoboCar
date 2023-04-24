@@ -111,3 +111,9 @@
 * In addition to "Forward", "Backward", "Left", "Right", we can teach the RoboCar to recognize more voice commands. 
 * We can redesign the power source so that the Mbed and the DC Motors can share the same power source instead of using two separate sources. 
 * We will redraw the facial expressions for the RoboCar to make it more colorful and lively. 
+## Contact Us
+**Bao Phuc Duong:** pduong3@gatech.edu
+
+**Cody Ells:** cells3@gatech.edu
+
+**Austin Rowland:** arowland33@gatech.edu
