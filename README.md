@@ -74,12 +74,16 @@
 |   -     |      |      C          |          |
 
 **LEDs to Mbed**
-| LEDs           |Mbed|
-| ---            | ---|
-| Front Left LED | p5 |
-| Front Right LED| p8 |
-| Back Left LED  |p18 |
-| Back Right LED | p16| 
+| LEDs             |Mbed|
+| ---              | ---|
+| Front Left LED + | p5 |
+| Front Left LED - | GND|
+| Front Right LED +| p8 |
+| Front Right LED -| GND|
+| Back Left LED +  |p18 |
+| Back Left LED -  |GND |
+| Back Right LED + | p16|
+|Back Right LED -  | GND|
 
 ## Complete Schematic
 * Insert Fritzing diagram here
