@@ -23,8 +23,8 @@
 ## System Connections
 
 ### Format: 
-Inbound Connection: The connection on the listed device or peripheral
-Outbound Connection: The connection on another device or peripheral
+* Inbound Connection: The connection on the listed device or peripheral
+* Outbound Connection: The connection on another device or peripheral
 
 ### ARM Mbed LPC1768
 
@@ -45,23 +45,41 @@ Outbound Connection: The connection on another device or peripheral
 | GND | GND| 
 
 ### H-Bride Motor Driver
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| VCC | Mbed Pin VIN |
+| Echo | Mbed Pin 7 |
+| Trig | Mbed Pin 6 |
+| GND | GND|
 
 ### Left Motor
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| Positive Terminal | Mbed Pin VIN |
+| Negative Terminal |  |
 
 ### Right Motor
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| Positive Terminal |  |
+| Negative Terminal |  |
 
 ### Speaker
+| Inbound Connection | Outbound Connection |
+| --- | --- |
+| Positive Terminal | Mbed Pin VIN |
+| Negative Terminal |  |
 
 ### Battery Pack 1
 | Inbound Connection | Outbound Connection |
 | --- | --- |
-| Front Left LED | Mbed Pin 5 |
-| Front Right LED | Mbed Pin 8 |
+| 5V | Mbed VIN |
+| GND | GND |
 
 ### Battery Pack 2
 | Inbound Connection | Outbound Connection |
 | --- | --- |
-| 5V | VIN |
+| 5V | Battery 5V |
 | GND | GND |
 
 ### LEDs
