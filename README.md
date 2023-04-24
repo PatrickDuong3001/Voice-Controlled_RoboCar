@@ -17,78 +17,69 @@
 * LEDs: https://www.sparkfun.com/products/12062
 * PCB-Mount Speaker: https://www.sparkfun.com/products/11089
 * Dual H-Bridge Motor Driver: https://www.sparkfun.com/products/14451
-* Driver Resistor: https://www.sparkfun.com/products/521
+* Driver Transistor: https://www.sparkfun.com/products/521
 * uLCD-144-g2: https://www.sparkfun.com/products/11377
 
 ## System Connections
+**EasyVR 3 Plus to Mbed**
+|EasyVR|Mbed|Batteries|
+| --- | --- | -------- |
+| TX  | p14 |          |
+| RX  | p13 |          |
+| 5V  |     |     5V   |
+| GND | GND |    GND   |
 
-### Format: 
-* Inbound Connection: The connection on the listed device or peripheral
-* Outbound Connection: The connection on another device or peripheral
+**Ultrasonic Sensor to Mbed**
+|Sonar|Mbed|Batteries|
+| --- |--- | --------|
+| VCC |    |   5V    |
+| Echo| p7 |         |
+| Trig| p6 |         |
+| GND | GND|  GND    |
 
-### ARM Mbed LPC1768
+**uLCD to Mbed**
+|uLCD|Mbed|Batteries|
+|--- | ---| ---     |
+| 5V |    |   5V    |
+| GND|    |  GND    |
+| TX | p9 |         |
+| RX | p10|         |
+| RST| p30|         |
 
-### Easy VR 3 Plus
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| TX | Mbed Pin 14 |
-| RX | Mbed Pin 13 |
-| 5V | VIN |
-| GND | GND| 
+**H-Bridge Motor Driver to Mbed**
+|H-Bridge     |     Mbed     |Batteries     |Left Motor  |Right Motor |
+|-------------|--------------|--------------|------------|------------| 
+| VM          |              |      5V      |            |            |
+| VCC         |  VOUT        |              |            |            |
+| GND         |  GND         |      GND     |            |            |
+| AO1         |              |              |      +     |            |
+| AO2         |              |              |      -     |            |
+| BO1         |              |              |            |      +     |
+| BO2         |              |              |            |      -     |
+| PWMA        |  p21         |              |            |            |
+| AI1         |  p17         |              |            |            |
+| AI2         |  p15         |              |            |            |
+| STBY        |  VOUT        |              |            |            |
+| BI1         |  p19         |              |            |            |
+| BI2         |  p20         |              |            |            |
+| PWMB        |  p22         |              |            |            |
+| GND         |  GND         |  GND         |            |            |
 
-### SONAR
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| VCC | Mbed Pin VIN |
-| Echo | Mbed Pin 7 |
-| Trig | Mbed Pin 6 |
-| GND | GND| 
+**Speaker to Mbed**
+| Speaker | Mbed |Driver Transistor|Batteries |
+| ---     | ---  |  ---            | ---      |
+|   +     |      |                 |    5V    |
+|         |  p23 |    B            |          |
+|         |  GND |    E            |   GND    |
+|   -     |      |      C          |          |
 
-### H-Bride Motor Driver
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| VCC | Mbed Pin VIN |
-| Echo | Mbed Pin 7 |
-| Trig | Mbed Pin 6 |
-| GND | GND|
-
-### Left Motor
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| Positive Terminal | Mbed Pin VIN |
-| Negative Terminal |  |
-
-### Right Motor
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| Positive Terminal |  |
-| Negative Terminal |  |
-
-### Speaker
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| Positive Terminal | Mbed Pin VIN |
-| Negative Terminal |  |
-
-### Battery Pack 1
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| 5V | Mbed VIN |
-| GND | GND |
-
-### Battery Pack 2
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| 5V | Battery 5V |
-| GND | GND |
-
-### LEDs
-| Inbound Connection | Outbound Connection |
-| --- | --- |
-| Front Left LED | Mbed Pin 5 |
-| Front Right LED | Mbed Pin 8 |
-| Back Left LED | Mbed Pin 18 |
-| Back Right LED | Mbed Pin 16 | 
+**LEDs to Mbed**
+| LEDs           |Mbed|
+| ---            | ---|
+| Front Left LED | p5 |
+| Front Right LED| p8 |
+| Back Left LED  |p18 |
+| Back Right LED | p16| 
 
 ## Complete Schematic
 * Insert Fritzing diagram here
