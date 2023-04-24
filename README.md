@@ -2,7 +2,13 @@
 **Georgia Institute of Technology - ECE4180 Final Project**
 
 **Creators: Bao Phuc Duong, Cody Ells, Austin Rowland**
-
+## Table of Content
+1. [Motivation](#Motivation)
+2. [Electronic Components](#Electronic-Components)
+3. [System Connections](#System-Connections)
+4. [Complete Schematic](#Complete-Schematic)
+5. [How RoboCar works](#How-RoboCar-works)
+6. [Future Improvements](#Future-Improvements)
 ## Motivation
 * Throughout the course, we've learned a lot about embedded system programming and hardware design, so we're eager to create a brand new robot to see how we utilize our classroom knowledge and showcase our skills.
 * We are impressed by how smart Vector and Emo robot can recognize the voice commands and do funny things based on the commands. We are confident we can also create one like that, so we decided to buid this RoboCar.
