@@ -332,7 +332,7 @@ int main() {
             motorB.speed(0);
         }
         pc.printf("distance: %d\n", distance);
-        if (distance > 10 && distance < 100) {  //turn right when meet obstacles
+        if (distance > 10 && distance < 200) {  //turn right when meet obstacles
             ledType = 0;
             commandReceived = 2;
             soundType = 3;
