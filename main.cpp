@@ -315,11 +315,11 @@ int main() {
             facialExpression(4);
             ledType = 2;
             soundType = 2;
-            int j = 0;
+            float j = 0;
             while (j < 11) {    //move backward for only 3 seconds
                 motorA.speed(1);
                 motorB.speed(-1);
-                j++;
+                j+=0.5;
             }
             commandReceived = 0;
             soundType = 0;
