@@ -4,15 +4,19 @@
 **Creators: Bao Phuc Duong, Cody Ells, Austin Rowland**
 ## Table of Content
 1. [Motivation](#Motivation)
-2. [Electronic Components](#Electronic-Components)
-3. [System Connections](#System-Connections)
-4. [Complete Schematic](#Complete-Schematic)
-5. [How RoboCar works](#How-RoboCar-works)
-6. [Future Improvements](#Future-Improvements)
+2. [Showcase](#Showcase)
+3. [Electronic Components](#Electronic-Components)
+4. [System Connections](#System-Connections)
+5. [Complete Schematic](#Complete-Schematic)
+6. [How RoboCar works](#How-RoboCar-works)
+7. [Future Improvements](#Future-Improvements)
 ## Motivation
 * Throughout the course, we've learned a lot about embedded system programming and hardware design, so we're eager to create a brand new robot to see how we utilize our classroom knowledge and showcase our skills.
 * We are impressed by how smart Vector and Emo robot can recognize the voice commands and do funny things based on the commands. We are confident we can also create one like that, so we decided to buid this RoboCar.
 * We want to have a cool project to put on our resume and our GitHub repo.
+
+## Showcase 
+[![RoboCar](https://img.youtube.com/vi/Ly4dVhk6Lw0/0.jpg)](https://youtu.be/Ly4dVhk6Lw0)
 
 ## Electronic Components
 * Shadow Chassis: https://www.sparkfun.com/products/13301
