@@ -18,7 +18,7 @@
 ## Showcase 
 [![RoboCar](https://img.youtube.com/vi/Ly4dVhk6Lw0/0.jpg)](https://youtu.be/Ly4dVhk6Lw0)
 
-**Slide Deck:** [ECE-4180 RoboCar Presentation](https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/austinrowland-patch-2/ECE4180RobotSildes.pptx?raw=true)
+**Slide Deck:** [ECE-4180 RoboCar Presentation](https://github.com/PatrickDuong3001/Voice-Controlled_RoboCar/blob/master/ECE4180RobotSildes.pptx?raw=true)
 
 ## Electronic Components
 * Shadow Chassis: https://www.sparkfun.com/products/13301
